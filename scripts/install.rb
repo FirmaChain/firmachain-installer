@@ -18,6 +18,6 @@ class In{{ .Release }} < Formula
   end
 
   def caveats
-    "{{ .Program }} was installed using https://github.com/jpillora/installer"
+    "{{ .Program }} was installed using https://github.com/FirmaChain/starport-installer"
   end
 end

@@ -8,7 +8,7 @@ import (
 	"github.com/rakyll/statik/fs"
 
 	//register data
-	_ "github.com/jpillora/installer/scripts"
+	_ "github.com/FirmaChain/starport-installer/scripts"
 )
 
 var installScript = []byte{}
