@@ -116,7 +116,7 @@ function install {
 	#move into PATH or cwd
 	chmod +x $TMP_BIN || fail "chmod +x failed"
 	{{ if .SudoMove }}echo "using sudo to move binary..."{{ end }}
-	{{ if .SudoMove }}sudo {{ end }}mv $TMP_BIN $OUT_DIR/$PROG || fail "mv failed" #FINAL STEP!
+	{{ if .SudoMove }}sudo {{ end }}mv $TMP_BIN $OUT_DIR/ || fail "mv failed" #FINAL STEP!
 	echo "{{ if .MoveToPath }}Installed at{{ else }}Downloaded to{{ end }} $OUT_DIR/$PROG"
 	#done
 	cleanup

@@ -86,7 +86,12 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, msg, http.StatusInternalServerError)
 	}
 	//"route"
-	m := pathRe.FindStringSubmatch("/FirmaChain/firmachain")
+
+	urlPath := r.URL.Path
+	urlPath = strings.ReplaceAll(urlPath, "/", "")
+	m := pathRe.FindStringSubmatch("/FirmaChain/firmachain" + urlPath)
+
+	//m := pathRe.FindStringSubmatch("/FirmaChain/firmachain@v0.1.0")
 
 	if len(m) == 0 {
 		showError("Invalid path", http.StatusBadRequest)
