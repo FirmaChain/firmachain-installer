@@ -45,5 +45,10 @@ wget -qO- build.firmachain.org | bash
 	0.2.3-603f495a
 	
 
-    
+## Build Information
+If you want to change /scripts/install.sh file, after change it, run below command (statik needs) and then webserver knows it.
+
+	statik -src=./scripts
+	cp ./statik/statik.go ./scripts/statik.go
+
 
