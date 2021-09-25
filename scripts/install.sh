@@ -117,7 +117,7 @@ function install {
 	chmod +x $TMP_BIN || fail "chmod +x failed"
 	{{ if .SudoMove }}echo "using sudo to move binary..."{{ end }}
 	{{ if .SudoMove }}sudo {{ end }}mv $TMP_BIN $OUT_DIR/ || fail "mv failed" #FINAL STEP!
-	echo "{{ if .MoveToPath }}Installed at{{ else }}Downloaded to{{ end }} $OUT_DIR/$PROG"
+	echo "{{ if .MoveToPath }}Installed at{{ else }}Downloaded to{{ end }} $OUT_DIR"
 	#done
 	cleanup
 }
