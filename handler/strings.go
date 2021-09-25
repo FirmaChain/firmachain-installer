@@ -12,14 +12,21 @@ var (
 )
 
 func getOS(s string) string {
+
 	s = strings.ToLower(s)
+
+	// added for preventing firmachain -> fir mac chain : mac like.
+	// it's not ultimate solution.
+	s = strings.ReplaceAll(s, "firmachain", "")
 	o := posixOSRe.FindString(s)
+
 	if o == "mac" || o == "osx" {
 		o = "darwin"
 	}
 	if o == "win" {
 		o = "windows"
 	}
+
 	return o
 }
 
