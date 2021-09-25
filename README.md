@@ -31,7 +31,7 @@ wget -qO- build.firmachain.org | bash
 ## Examples
 
 
-    ```sh
+    
     $ curl https://build.firmachain.org | bash
     
     	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -43,7 +43,7 @@ wget -qO- build.firmachain.org | bash
 
     $ ./firmachain version
 	0.2.3-603f495a
-	$ 
+	
 
-    ```
+    
 
